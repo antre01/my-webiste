@@ -1,0 +1,98 @@
+@use "../variables/" as v;
+
+ul {
+  list-style: none;
+}
+
+li {
+  color: var(--off-white);
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--off-white);
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--off-white);
+}
+
+i {
+  font-weight: 300;
+  color: var(--off-white);
+}
+
+svg {
+  fill: var(--off-white);
+}
+
+a {
+  text-decoration: none;
+  font-size: 1.25rem;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+}
+
+label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--off-white);
+}
+
+.required-icon {
+  color: var(--accent-color);
+}
+
+.error {
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1;
+  color: rgb(218, 44, 44);
+  margin-top: 0.3rem;
+}
+
+.error-active {
+  animation: opacity-show 0.3s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+@keyframes opacity-show {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.alert {
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1;
+  color: var(--accent-color);
+  margin-top: 0.3rem;
+}
+
+.alert-active {
+  animation: alert-show 0.3s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+@keyframes alert-show {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

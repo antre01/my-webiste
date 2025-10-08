@@ -1,0 +1,47 @@
+@use "../variables/" as v;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Figtree", sans-serif;
+}
+
+body {
+  position: relative;
+  max-width: 100vw;
+  min-height: 100vh;
+  background-image: url("/assets/images/bg3.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: var(--dark-blue);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-inline: 1rem;
+
+  @include v.breakpoint(medium) {
+    padding-inline: 1.25rem;
+  }
+
+  @include v.breakpoint(small) {
+    padding-block: 1rem 2rem;
+  }
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: hsla(0, 0%, 0%, 0.1);
+}

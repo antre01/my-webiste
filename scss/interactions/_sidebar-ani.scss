@@ -1,0 +1,43 @@
+@use '../variables/' as v;
+
+#sidebar-active:checked {
+  @include v.breakpoint(small) {
+    & ~ .nav-header .nav-header__navbar {
+      right: 0 !important;
+    }
+  }
+}
+
+#sidebar-active:checked {
+  @include v.breakpoint(small) {
+    & ~ .nav-header .nav-header__logo {
+      opacity: 0;
+
+      a {
+        pointer-events: none;
+        cursor: not-allowed;
+      }
+    }
+  }
+}
+
+#overlay {
+  @include v.breakpoint(small) {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    background-color: hsla(0, 0%, 0%, 0.2);
+    backdrop-filter: blur(0.15rem);
+    transition: 0.75s ease-out;
+  }
+}
+
+#sidebar-active:checked ~ #overlay {
+  @include v.breakpoint(small) {
+    opacity: 1;
+    z-index: 9;
+  }
+}

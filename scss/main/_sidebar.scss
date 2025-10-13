@@ -1,0 +1,25 @@
+@use "../variables/" as v;
+
+.sidebar-active {
+  right: 0;
+}
+
+.sidebar-active ~ #overlay {
+  display: block;
+}
+
+#dropdown-overlay {
+  position: fixed;
+  display: none;
+  inset: 0;
+  background: transparent;
+  z-index: 11; 
+}
+
+#portfolio-active:checked ~ header .navbar #dropdown-overlay,
+#socials-active:checked ~ header .navbar #dropdown-overlay {
+  display: block;
+}
+
+
+

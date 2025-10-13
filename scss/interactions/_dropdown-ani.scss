@@ -1,0 +1,43 @@
+// Shows dropdown when we click on nav-link
+@use "../variables/" as v;
+
+#portfolio-active:checked {
+  & ~ * .portfolio-link,
+  & + * .portfolio-link {
+    color: var(--dark-blue);
+  }
+  & ~ * .portfolio-arrow,
+  & + * .portfolio-arrow {
+    color: var(--dark-blue);
+    transform: rotate(180deg);
+  }
+  & ~ * .portfolio-dropdown,
+  & + * .portfolio-dropdown {
+    opacity: 1;
+    
+
+    @include v.breakpoint(small) {
+      display: flex;
+    }
+  }
+}
+
+#socials-active:checked {
+  & ~ * .socials-link,
+  & + * .socials-link {
+    color: var(--dark-blue);
+  }
+  & ~ * .socials-arrow,
+  & + * .socials-arrow {
+    color: var(--dark-blue);
+    transform: rotate(180deg);
+  }
+  & ~ * .socials-dropdown,
+  & + * .socials-dropdown {
+    opacity: 1;
+
+    @include v.breakpoint(small) {
+      display: flex;
+    }
+  }
+}

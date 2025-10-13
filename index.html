@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Me!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="dist/style.css" />
+    <script
+      src="https://kit.fontawesome.com/b74ac4e86f.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <input type="checkbox" id="sidebar-active" hidden />
+    <input type="checkbox" id="portfolio-active" hidden />
+    <input type="checkbox" id="socials-active" hidden />
+    <label for="sidebar-active" id="overlay"></label>
+    <!-- HEADER: START -->
+    <header class="nav-header">
+      <a href="index.html"
+        ><div class="nav-header__logo">
+          <h1>
+            <span>Antoni</span><span style="font-weight: 800">Trela</span>
+          </h1>
+        </div>
+      </a>
+      <!-- NAV LINKS: START -->
+      <nav class="nav-header__navbar navbar">
+        <div class="close-container">
+          <label for="sidebar-active"
+            ><i class="fa-solid fa-xmark close-icon"></i
+          ></label>
+        </div>
+        <ul class="links">
+          <li class="nav-link">
+            <span class="nav-link-content home-link">Home</span>
+          </li>
+          <label for="portfolio-active">
+            <li class="nav-link">
+              <span class="nav-link-content portfolio-link">
+                Portflio
+                <i class="fa-solid fa-angle-down link-icon portfolio-arrow"></i>
+              </span>
+              <!-- DROPDOWN START -->
+              <ul class="dropdown portfolio-dropdown">
+                <a
+                  href="https://weather-app-3bf3cf.netlify.app/"
+                  target="_blank"
+                  ><li class="dropdown-item">
+                    <i class="fa-solid fa-cloud dropdown-icon"></i>
+                    Weather App
+                  </li>
+                </a>
+                <a
+                  href="https://splitter-app-ea5d4b.netlify.app/"
+                  target="_blank"
+                >
+                  <li class="dropdown-item">
+                    <i class="fa-solid fa-coins dropdown-icon"></i>Tip
+                    Calculator
+                  </li>
+                </a>
+                <a
+                  href="https://mortgage-calculator-two-kappa.vercel.app/"
+                  target="_blank"
+                >
+                  <li class="dropdown-item mortgage-item">
+                    <i class="fa-solid fa-hand-holding-dollar dropdown-icon"></i
+                    >Mortgage <br />Calculator
+                  </li>
+                </a>
+              </ul>
+              <!-- DROPDOWN END -->
+            </li>
+          </label>
+          <label for="socials-active">
+            <li class="nav-link">
+              <span class="nav-link-content socials-link">
+                Socials
+                <i class="fa-solid fa-angle-down link-icon socials-arrow"></i>
+              </span>
+              <!-- DROPDOWN START -->
+              <ul class="dropdown socials-dropdown">
+                <a
+                  href="https://www.linkedin.com/in/antoni-t-a42001332/"
+                  target="_blank"
+                >
+                  <li class="dropdown-item">
+                    <i class="fa-brands fa-linkedin dropdown-icon"></i>
+                    LinkedIn
+                  </li>
+                </a>
+                <a href="https://github.com/antre01" target="_blank">
+                  <li class="dropdown-item">
+                    <i class="fa-brands fa-github dropdown-icon"></i>
+                    GitHub
+                  </li>
+                </a>
+                <a
+                  href="https://www.frontendmentor.io/profile/antre01"
+                  target="_blank"
+                >
+                  <li class="dropdown-item">
+                    <svg
+                      fill="hsl(20, 10%, 94%)"
+                      width="14.5px"
+                      height="14.5px"
+                      viewBox="0 0 24 24"
+                      role="img"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="dropdown-icon"
+                    >
+                      <path
+                        d="M12.17 1.272a.732.732 0 0 0-.718.732v13.914a.732.732 0 0 0 .732.732.732.732 0 0 0 .732-.732V2.004a.732.732 0 0 0-.745-.732zM23.246 5.44a.734.734 0 0 0-.277.063l-6.282 2.804a.733.733 0 0 0 0 1.336l6.282 2.813a.738.738 0 0 0 .3.065.732.732 0 0 0 .297-1.4L18.78 8.976l4.786-2.137a.734.734 0 0 0 .37-.966.734.734 0 0 0-.69-.433zm-22.5 5.032a.732.732 0 0 0-.722.915c1.736 6.677 7.775 11.341 14.683 11.341a.732.732 0 0 0 0-1.464A13.706 13.706 0 0 1 1.44 11.02a.732.732 0 0 0-.694-.547z"
+                      />
+                    </svg>
+                    Frontend Mentor
+                  </li>
+                </a>
+              </ul>
+              <!-- DROPDOWN END -->
+            </li>
+          </label>
+        </ul>
+      </nav>
+      <!-- NAV LINKS: END -->
+      <section class="nav-right">
+        <div class="clock-container">
+          <span class="clock"
+            ><i class="fa-solid fa-clock clock-icon"></i>
+            <p class="time">00:00 AM</p>
+          </span>
+        </div>
+        <div class="menu-container">
+          <label for="sidebar-active"
+            ><i class="fa-solid fa-bars menu-icon"></i
+          ></label>
+        </div>
+      </section>
+    </header>
+    <!-- HEADER: END -->
+    <main class="main-content">
+      <section class="main-content__left">
+        <header class="header">
+          <h1>
+            Get in touch!
+            <hr />
+          </h1>
+          <span class="header__message">
+            Fill out the form and send the message you want to address me!
+          </span>
+        </header>
+        <div class="content">
+          <div class="info">
+            <div class="details">
+              <span class="info-item">
+                <i class="fa-solid fa-user"></i>
+                <p>Antoni Trela</p>
+              </span>
+              <span class="info-item">
+                <i class="fa-solid fa-envelope"></i>
+                <p>antoni.trela01@gmail.com</p>
+              </span>
+              <span class="info-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <p>Kraków, Poland</p>
+              </span>
+            </div>
+
+            <div class="social-links">
+              <a
+                href="https://www.linkedin.com/in/antoni-t-a42001332/"
+                target="_blank"
+              >
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+              <a href="https://github.com/antre01" target="_blank">
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a
+                href="https://www.frontendmentor.io/profile/antre01"
+                target="_blank"
+              >
+                <svg
+                  fill="hsl(20, 10%, 94%)"
+                  width="20px"
+                  height="20px"
+                  viewBox="0 0 24 24"
+                  role="img"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12.17 1.272a.732.732 0 0 0-.718.732v13.914a.732.732 0 0 0 .732.732.732.732 0 0 0 .732-.732V2.004a.732.732 0 0 0-.745-.732zM23.246 5.44a.734.734 0 0 0-.277.063l-6.282 2.804a.733.733 0 0 0 0 1.336l6.282 2.813a.738.738 0 0 0 .3.065.732.732 0 0 0 .297-1.4L18.78 8.976l4.786-2.137a.734.734 0 0 0 .37-.966.734.734 0 0 0-.69-.433zm-22.5 5.032a.732.732 0 0 0-.722.915c1.736 6.677 7.775 11.341 14.683 11.341a.732.732 0 0 0 0-1.464A13.706 13.706 0 0 1 1.44 11.02a.732.732 0 0 0-.694-.547z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="empty-div"></div>
+        </div>
+      </section>
+      <section class="main-content__right">
+        <!-- FORM: START -->
+        <form
+          action="https://api.web3forms.com/submit"
+          method="POST"
+          onsubmit="return validateForm(event)"
+          class="form"
+        >
+          <input
+            type="hidden"
+            name="access_key"
+            value="b0c7e7cd-d25d-4251-96e5-2f8d8190d7fa"
+          />
+
+          <input
+            type="hidden"
+            name="redirect"
+            value="https://web3forms.com/success"
+          />
+          <div class="input-item">
+            <label for="name"
+              >Your Name <span class="required-icon">*</span></label
+            >
+            <i class="fa-solid fa-user input-icon name-icon"></i>
+            <i class="fa-solid fa-check check-icon"></i>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              class="name"
+              placeholder="Enter your name"
+              autocomplete="off"
+            />
+            <span class="error name-error"></span>
+          </div>
+          <div class="input-item">
+            <label for="email"
+              >Email Address <span class="required-icon">*</span></label
+            >
+            <i class="fa-solid fa-envelope input-icon email-icon"></i>
+            <i class="fa-solid fa-check check-icon check-icon-email"></i>
+            <input
+              type="email novalidate/"
+              name="email"
+              id="email"
+              class="email"
+              placeholder="example@email.com"
+              autocomplete="off"
+            />
+            <span class="error email-error"></span>
+            <span class="alert make-sure"></span>
+          </div>
+          <div class="input-item">
+            <label for="message"
+              >Your message <span class="required-icon">*</span></label
+            >
+            <i class="fa-solid fa-message input-icon message-icon"></i>
+            <textarea
+              name="message"
+              id="message"
+              class="text"
+              rows="4"
+              placeholder="Type your message here.."
+              autocomplete="off"
+            ></textarea>
+            <span class="error message-error"></span>
+          </div>
+          <div class="buttons">
+            <button type="submit" class="send-btn">
+              SEND <i class="fa-solid fa-paper-plane"></i>
+            </button>
+            <button type="button" class="clear-btn">Clear All</button>
+          </div>
+        </form>
+        <!-- FORM: END -->
+      </section>
+    </main>
+    <script defer src="main.js"></script>
+  </body>
+</html>

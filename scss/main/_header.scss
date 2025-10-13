@@ -1,0 +1,256 @@
+@use "../variables/" as v;
+
+.nav-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.3rem 3rem 0.5rem 3rem;
+  z-index: 10;
+
+  @include v.breakpoint(medium) {
+    padding: 1.3rem 1.25rem 0.5rem 1.25rem;
+  }
+
+  @include v.breakpoint(small) {
+    padding: 1rem 0.875rem 0.3rem 0.875rem;
+  }
+
+  &__logo {
+    cursor: pointer;
+
+    @include v.breakpoint(small) {
+      opacity: 1;
+      transition: 0.4s ease;
+    }
+    h1 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      transition: all 0.4s;
+
+      @include v.breakpoint(medium) {
+        font-size: 1.1rem;
+      }
+    }
+
+    h1:hover,
+    h1:active {
+      color: var(--dark-blue);
+      transform: scale(1.03);
+    }
+  }
+
+  &__navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1.5rem;
+
+    @include v.breakpoint(small) {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      bottom: 0;
+      width: 60%;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 1.5rem;
+      background-color: hsla(263, 50%, 3%, 0.5);
+      backdrop-filter: blur(0.3rem);
+      padding: 1.2rem 1.2rem 1.2rem 2rem;
+      transition: 0.75s ease-out;
+    }
+
+    .close-container {
+      display: none;
+
+      @include v.breakpoint(small) {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      .close-icon {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: var(--off-white);
+        cursor: pointer;
+        transition: all 0.3s;
+      }
+
+      .close-icon:hover,
+      .close-icon:active {
+        color: var(--dark-blue);
+      }
+    }
+
+    .links {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 4rem;
+
+      @include v.breakpoint(small) {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.75rem;
+      }
+
+      .nav-link {
+        position: relative;
+        cursor: pointer;
+        vertical-align: middle;
+        color: var(--off-white);
+        transition: all 0.3s;
+
+        .nav-link-content {
+          transition: all 0.3s;
+
+          .link-icon {
+            transition: all 0.3s;
+          }
+        }
+
+        .dropdown {
+          position: absolute;
+          left: 0;
+          min-width: max-content;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          gap: 0.8rem;
+          padding-block: 1rem;
+
+          @include v.breakpoint(small) {
+            position: relative;
+            display: none;
+            padding-block: 0;
+            padding-top: 1rem;
+          }
+
+          .dropdown-item {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-size: 0.875rem;
+            font-weight: 300;
+            line-height: 1.2;
+            transition: all 0.3s;
+
+            .dropdown-icon {
+              transition: all 0.3s;
+            }
+          }
+
+          .dropdown-item:hover,
+          .dropdown-item:active,
+          .dropdown-item:hover .dropdown-icon,
+          .dropdown-item:active .dropdown-icon {
+            fill: var(--dark-blue);
+            color: var(--dark-blue);
+          }
+
+          .mortgage-item {
+            align-items: flex-start;
+          }
+        }
+
+        .portfolio-dropdown {
+          opacity: 0;
+          transition: all 0.42s ease-in-out;
+        }
+
+        .socials-dropdown {
+          opacity: 0;
+          transition: all 0.5s ease-in-out;
+        }
+      }
+
+      .nav-link-content:hover,
+      .nav-link-content:active {
+        color: var(--dark-blue);
+
+        @include v.breakpoint(small) {
+          color: var(--off-white);
+        }
+      }
+
+      .nav-link-content:hover .link-icon,
+      .nav-link-content:active .link-icon {
+        color: var(--dark-blue);
+
+        @include v.breakpoint(small) {
+          color: var(--off-white);
+        }
+      }
+
+      .home-link:active {
+        color: var(--dark-blue);
+      }
+    }
+  }
+
+  .nav-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 2rem;
+
+    @include v.breakpoint(small) {
+      gap: 1rem;
+    }
+
+    .clock-container {
+      .clock {
+        display: flex;
+        align-items: center;
+        gap: 0.3125rem;
+        color: var(--off-white);
+
+        .clock-icon {
+          font-size: 1rem;
+          font-weight: 300;
+          line-height: 1.1;
+
+          @include v.breakpoint(medium) {
+            font-size: 0.875rem;
+          }
+        }
+
+        .time {
+          font-size: 1rem;
+          font-weight: 500;
+          line-height: 1.1;
+
+          @include v.breakpoint(medium) {
+            font-size: 0.875rem;
+          }
+        }
+      }
+    }
+
+    .menu-container {
+      display: none;
+
+      @include v.breakpoint(small) {
+        display: block;
+      }
+
+      .menu-icon {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: var(--off-white);
+        cursor: pointer;
+        transition: all 0.3s;
+      }
+
+      .menu-icon:hover,
+      .menu-icon:active {
+        color: var(--dark-blue);
+      }
+    }
+  }
+}
